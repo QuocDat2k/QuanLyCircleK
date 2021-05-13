@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<form action="@Url.Action("Login","Account")" method="post">
+    <label>Username</label>
+    <input type="text" name="username" value="@ViewBag.username" />
+    <span style="color: red">@ViewBag.usernameError</span>
+    <label>Password</label>
+    <input type="password" name="pass" value="" placeholder="**********" />
+    <span style="color: red">@ViewBag.passwordError</span>
+    <button type="submit">Sign in</button>
+    <button type="reset">Clear</button>
+</form>
+
+
+@if (ViewBag.invalidData != null)
+{
+    <script>
+        alert("@ViewBag.invalidData");
+    </script>
+}

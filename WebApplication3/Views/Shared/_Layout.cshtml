@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/ckeditor")
+
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("CircleK Store", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+
+                    <li>@Html.ActionLink("Nhà cung cấp", "Index", "NhaCCs")</li>
+                    <li>@Html.ActionLink("Hàng Hóa", "Index", "HangHoa")</li>
+                    <li>@Html.ActionLink("Khách Hàng", "Index", "KhachHangs")</li>
+                    @*<li>@Html.ActionLink(" Nhập Kho", "Index", "NhapKhos")</li>
+                        <li>@Html.ActionLink(" Xuất Kho", "Index", "XuatKhos")</li>
+                        <li>@Html.ActionLink("Tồn kho", "Index", "Tonkhoes")</li>*@
+                    <li>@Html.ActionLink("Đăng Nhập", "Login", "Account")</li>
+                    <li>@Html.ActionLink("Đăng xuất", "Logoff", "Account")</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+
+        @RenderBody()
+    </div>
+    <hr />
+    <footer>
+        <img src="https://images.search.yahoo.com/search/images;_ylt=awrtlfp5tpfghg8ahg.jzbkf;_ylu=c2vja3nlyxjjaarzbgsdynv0dg9u;_ylc=x1mdotywnji4ntcex3idmgrhy3rua2nsawrjc3jjchzpzan3unvtvmpfd0xqthvnrlnewgtmqvdbwf9nakf3tvfbqufbqxpzzmhhbgzya21jywzlzqrmcjidc2etz3aez3byawqdenc0v2zoceduqm1nmkviq0tuqvhnqqrux3n1z2cdmtaeb3jpz2lua2ltywdlcy5zzwfyy2guewfob28uy29tbhbvcwmwbhbxc3ryawrwcxn0cmwdbhfzdhjsazi5bhf1zxj5a3npjumzjufbdsuymhrojuuxjujcjthcjtiwdmlubhrfc3rtcamxnjiwmtm1ntgy?p=si%c3%aau+th%e1%bb%8b+vin&fr=mcafee&fr2=sb-top-images.search&ei=utf-8&n=60&x=wrt#id=0&iurl=https%3a%2f%2fcdn-www.vinid.net%2f2020%2f04%2f400a89a7-vinmart-h%25c3%25a0-n%25e1%25bb%2599i.jpg&action=click" alt="young little girl image &amp; photo (free trial) | bigstock" />
+        <style>
+            img {
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+        </style>
+    </footer>-->
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    <script src="~/Scripts/ckeditor/ckeditor.js"></script>
+    <script>
+        CKEDITOR.replace('ckeditor');
+    </script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>

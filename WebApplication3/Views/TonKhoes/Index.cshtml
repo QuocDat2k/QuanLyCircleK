@@ -1,0 +1,52 @@
+﻿@model IEnumerable<QuanLy_CircleK.Models.TonKho>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MaHangHoa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SoNhap)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SoXuat)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SoTon)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaHangHoa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SoNhap)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SoXuat)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SoTon)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.STT }) |
+            @Html.ActionLink("Details", "Details", new { id=item.STT }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.STT })
+        </td>
+    </tr>
+}
+
+</table>

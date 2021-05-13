@@ -1,0 +1,51 @@
+﻿@model QuanLy_CircleK.Models.TonKho
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TonKho</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MaHangHoa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaHangHoa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SoNhap)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoNhap)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SoXuat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoXuat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SoTon)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoTon)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.STT }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,59 @@
+﻿@model QuanLy_CircleK.Models.NhapKho
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>NhapKho</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MaPhieuNhap)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaPhieuNhap)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaHangHoa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaHangHoa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SoLuong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoLuong)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NgayNhap)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayNhap)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaNCCS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaNCCS)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.STT }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
